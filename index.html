@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Екатерина & Никита | Мы женимся!</title>
+    <!-- Подключение CSS -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/sections.css">
     <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <!-- Подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;700&family=Marck+Script&display=swap" rel="stylesheet">
@@ -15,24 +18,27 @@
 </head>
 <body>
     <!-- Hero Section -->
-<div class="hero">
-  <div class="hero-content">
-    <div class="she-said-text">Она сказала</div>
-    <div class="yes-animation">
-      <svg class="yes-calligraphy" viewBox="0 0 200 100">
-        <path class="yes-path" d="M20,50 Q50,10 80,50 T140,50" fill="none" stroke="transparent" stroke-width="2"/>
-      </svg>
+    <div class="hero">
+        <div class="hero-content">
+            <div class="she-said-text">Она сказала</div>
+            <div class="yes-animation">
+                <svg class="yes-calligraphy" viewBox="0 0 200 100">
+                    <!-- Анимированная каллиграфическая линия -->
+                    <path class="yes-path" d="M20,50 Q50,10 80,50 T140,50" />
+                    <!-- Текст "ДА" -->
+                    <text class="yes-text" x="100" y="65">ДА</text>
+                </svg>
+            </div>
+            <h1 class="couple-names">Екатерина и Никита</h1>
+            <div class="wedding-date">16 сентября 2025</div>
+        </div>
+        <div class="scroll-down">
+            <svg width="30" height="50" viewBox="0 0 30 50">
+                <path d="M15 0V30M15 30L20 25M15 30L10 25" stroke="var(--primary-color)" stroke-width="2"/>
+                <path d="M2 42L15 49L28 42" stroke="var(--primary-color)" stroke-width="2"/>
+            </svg>
+        </div>
     </div>
-    <h1 class="couple-names">Екатерина и Никита</h1>
-    <div class="wedding-date">16 сентября 2025</div>
-  </div>
-  <div class="scroll-down">
-    <svg width="30" height="50" viewBox="0 0 30 50">
-      <path d="M15 0V30M15 30L20 25M15 30L10 25" stroke="var(--primary-color)" stroke-width="2"/>
-      <path d="M2 42L15 49L28 42" stroke="var(--primary-color)" stroke-width="2"/>
-    </svg>
-  </div>
-</div>
     
     <!-- Invitation Section -->
     <section class="section">
