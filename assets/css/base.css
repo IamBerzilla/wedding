@@ -1,0 +1,44 @@
+/* Базовые стили и переменные */
+:root {
+    --primary-color: #5d4037;
+    --secondary-color: #8d6e63;
+    --accent-color: #d7ccc8;
+    --text-color: #3e2723;
+    --light-bg: #fff9f5;
+    --gold: #c8a97e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Анимации */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+    40% { transform: translateY(-20px) translateX(-50%); }
+    60% { transform: translateY(-10px) translateX(-50%); }
+}
+
+/* Разделитель */
+.divider {
+    height: 1px;
+    background-color: var(--accent-color);
+    margin: 50px auto;
+    width: 150px;
+}
