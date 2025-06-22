@@ -420,6 +420,7 @@
   action="https://formspree.io/f/xvgrwgkn" 
   method="POST"
 >
+    <input type="hidden" name="_subject" value="Новый RSVP">
   <div class="form-group">
     <label for="name">Ваше имя *</label>
     <input type="text" id="name" name="name" required>
@@ -447,7 +448,7 @@
     <label for="message">Ваши пожелания</label>
     <textarea id="message" name="message" rows="4"></textarea>
   </div>
-  
+  <input type="text" name="_gotcha" style="display:none">
   <button type="submit">Отправить</button>
 </form>
     
