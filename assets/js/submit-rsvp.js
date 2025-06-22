@@ -20,10 +20,10 @@ document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
 
     try {
         // Отправляем запрос к GitHub API
-        const response = await fetch('https://api.github.com/repos/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/issues', {
+        const response = await fetch('https://api.github.com/repos/IamBerzilla/wedding/issues', {
             method: 'POST',
             headers: {
-                'Authorization': 'token ghp_yourTokenHere123', // Замените на ваш токен
+                'Authorization': 'token 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',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
