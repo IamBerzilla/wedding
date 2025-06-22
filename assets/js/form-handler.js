@@ -1,19 +1,30 @@
-// assets/js/form-handler.js
+// Обработчик формы
 function handleFormSubmit(event) {
   event.preventDefault();
   
-  // Показываем загрузку
-  document.body.innerHTML = `
-    <div class="form-loading" style="...">
-      <div class="loader"></div>
-      <p>Отправляем ваш ответ...</p>
-    </div>
+  // Создаем overlay для загрузки
+  const overlay = document.createElement('div');
+  overlay.className = 'form-loading-overlay';
+  
+  overlay.innerHTML = `
+    <div class="loader"></div>
+    <p>Отправляем ваш ответ...</p>
   `;
-
-  // Отправка формы
+  
+  // Оптимизация для мобильных
+  if (window.innerWidth < 768) {
+    const loader = overlay.querySelector('.loader');
+    loader.style.width = '35px';
+    loader.style.height = '35px';
+    loader.style.borderWidth = '3px';
+  }
+  
+  document.body.appendChild(overlay);
+  
+  // Отправка данных
   const form = event.target;
   const formData = new FormData(form);
-
+  
   fetch(form.action, {
     method: 'POST',
     body: formData,
@@ -27,15 +38,24 @@ function handleFormSubmit(event) {
     }
   })
   .catch(error => {
-    alert('Ошибка: ' + error.message);
-    window.location.reload();
+    alert('Ошибка отправки: ' + error.message);
+    document.body.removeChild(overlay);
   });
 }
 
-// Назначаем обработчик после загрузки DOM
+// Инициализация после загрузки DOM
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('rsvp-form');
   if (form) {
     form.addEventListener('submit', handleFormSubmit);
+  }
+  
+  // Автокоррекция пути для GitHub Pages
+  if (window.location.host.includes('github.io')) {
+    const nextField = document.querySelector('[name="_next"]');
+    if (nextField) {
+      const repoName = window.location.pathname.split('/')[1];
+      nextField.value = `/${repoName}/spasibo.html`;
+    }
   }
 });
