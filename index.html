@@ -451,6 +451,14 @@
     <label for="message">Ваши пожелания</label>
     <textarea id="message" name="message" rows="4"></textarea>
   </div>
+<!-- Honeypot-поле (должно быть пустым) -->
+  <input 
+    type="text" 
+    name="_honeypot" 
+    style="display:none !important" 
+    tabindex="-1"
+    autocomplete="off"
+  >
     <button type="submit">Отправить</button>
   </form>
   <!-- Подключение скрипта -->
