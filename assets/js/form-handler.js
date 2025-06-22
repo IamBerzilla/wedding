@@ -1,61 +1,48 @@
-// Обработчик формы
 function handleFormSubmit(event) {
   event.preventDefault();
   
-  // Создаем overlay для загрузки
+  // Показываем загрузку
   const overlay = document.createElement('div');
   overlay.className = 'form-loading-overlay';
-  
   overlay.innerHTML = `
     <div class="loader"></div>
     <p>Отправляем ваш ответ...</p>
   `;
-  
-  // Оптимизация для мобильных
-  if (window.innerWidth < 768) {
-    const loader = overlay.querySelector('.loader');
-    loader.style.width = '35px';
-    loader.style.height = '35px';
-    loader.style.borderWidth = '3px';
-  }
-  
   document.body.appendChild(overlay);
-  
-  // Отправка данных
+
+  // Формируем данные для отправки
   const form = event.target;
   const formData = new FormData(form);
-  
-  fetch(form.action, {
+  const plainFormData = Object.fromEntries(formData.entries());
+  const jsonData = JSON.stringify(plainFormData);
+
+  // Отправка через Formspree API v2
+  fetch('https://formspree.io/f/xvgrwgkn', {
     method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
+    body: jsonData,
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }
   })
   .then(response => {
     if (response.ok) {
       window.location.href = form.querySelector('[name="_next"]').value;
     } else {
-      throw new Error('Ошибка сервера');
+      throw new Error('Formspree rejected the submission');
     }
   })
   .catch(error => {
-    alert('Ошибка отправки: ' + error.message);
+    console.error('Error:', error);
+    alert('Ошибка отправки. Пожалуйста, напишите нам напрямую.');
+  })
+  .finally(() => {
     document.body.removeChild(overlay);
   });
 }
 
-// Инициализация после загрузки DOM
+// Инициализация формы
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('rsvp-form');
-  if (form) {
-    form.addEventListener('submit', handleFormSubmit);
-  }
-  
-  // Автокоррекция пути для GitHub Pages
-  if (window.location.host.includes('github.io')) {
-    const nextField = document.querySelector('[name="_next"]');
-    if (nextField) {
-      const repoName = window.location.pathname.split('/')[1];
-      nextField.value = `/${repoName}/spasibo.html`;
-    }
-  }
+  if (form) form.addEventListener('submit', handleFormSubmit);
 });
