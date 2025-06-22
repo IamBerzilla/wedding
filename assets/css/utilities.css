@@ -1,0 +1,54 @@
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 500px;
+        padding-top: 80px;
+    }
+    
+    .big-yes {
+        font-size: 15vw;
+    }
+    
+    .couple-names {
+        font-size: 8vw;
+    }
+    
+    .wedding-date {
+        font-size: 1.2rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        height: 200px;
+    }
+
+    /* Оптимизация карты */
+    .yandex-map {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .yandex-map {
+        height: 250px;
+    }
+    
+    .map-container {
+        border-radius: 8px;
+    }
+}
