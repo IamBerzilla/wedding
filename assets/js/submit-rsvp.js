@@ -23,7 +23,7 @@ document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
         const response = await fetch('https://api.github.com/repos/IamBerzilla/wedding/issues', {
             method: 'POST',
             headers: {
-                'Authorization': 'token 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',
+                'Authorization': 'token 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',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
