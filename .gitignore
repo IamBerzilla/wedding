@@ -1,5 +1,6 @@
 # Игнорировать конфиги с токенами
 config.js
+submit-rsvp.js
 .env
 secrets.*
 *.token
