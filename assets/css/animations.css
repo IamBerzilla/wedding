@@ -10,7 +10,7 @@
     stroke-dasharray: 200;
     stroke-dashoffset: 200;
     animation: draw 2s ease-in-out forwards;
-    stroke: #fff;
+    stroke: var(--text-color); /* Используем цвет из base.css */
     stroke-width: 2;
     fill: none;
 }
@@ -18,10 +18,11 @@
 .yes-text {
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
-    fill: #fff;
+    fill: var(--text-color); /* Цвет как в base.css (#3e2723) */
     text-anchor: middle;
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards 1.5s;
+    font-weight: 700; /* Жирность для лучшей читаемости */
 }
 
 @keyframes draw {
