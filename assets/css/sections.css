@@ -154,7 +154,6 @@ footer {
 
 @media (max-width: 768px) {
     .hero .yes-animation {
-        width: 180px;
-        height: 120px;
+        width: 200px;
+        height: 140px;
     }
-}
