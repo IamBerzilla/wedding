@@ -1,60 +1,73 @@
-/* Анимация текста "ДА" */
+/* Анимация текста "Да" */
 .yes-animation {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px 0;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
+  margin-top: 20px;
 }
 
 .yes-text {
-  position: relative;
   font-family: 'Pacifico', cursive;
-  text-transform: uppercase;
   font-size: 8rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  overflow: hidden;
   color: var(--text-color);
-  text-align: center;
-  
-  /* Анимация свечения */
-  background: linear-gradient(90deg, 
-    var(--light-bg), 
-    var(--text-color), 
-    var(--light-bg));
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: text-glow 3s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(62, 39, 35, 0.3);
-  
-  /* Тень текста */
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
-               0 0 10px rgba(62, 39, 35, 0.3);
+  margin-bottom: 10px;
+  display: flex;
 }
 
-@keyframes text-glow {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
-  }
+.letter-d {
+  display: inline-block;
+  animation: fadeInLetters 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.letter-a {
+  display: inline-block;
+  animation: fadeInLetters 1.5s ease-out 0.5s forwards;
+  opacity: 0;
+  text-transform: lowercase;
+}
+
+.underline {
+  height: 2px;
+  width: 60%;
+  background: var(--gold);
+  margin: 10px 0 20px;
+  align-self: center;
+  margin-left: 40%;
+}
+
+.invitation-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  margin-bottom: 10px;
 }
 
 /* Адаптация для мобильных */
 @media (max-width: 768px) {
   .yes-text {
-    font-size: 4.5rem;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
-                 0 0 8px rgba(62, 39, 35, 0.3);
+    font-size: 5rem;
+  }
+  
+  .underline {
+    width: 70%;
+    margin-left: 30%;
+  }
+  
+  .invitation-text {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .yes-text {
-    font-size: 3.8rem;
+    font-size: 4rem;
+  }
+  
+  .underline {
+    width: 80%;
+    margin-left: 20%;
   }
 }
