@@ -62,3 +62,14 @@
 body {
     animation: fadeIn 1s ease-out;
 }
+
+@media (max-width: 768px) {
+    .hero .yes-animation {
+        width: 200px;
+        height: 140px;
+    }
+    
+    .stroke-path {
+        stroke-width: 2.5;
+    }
+}
