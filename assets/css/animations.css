@@ -63,3 +63,14 @@
     width: 80%;
   }
 }
+
+@media (max-width: 768px) {
+  .scroll-down-text {
+    font-size: 0.7rem; /* Ещё меньше на мобильных */
+  }
+  
+  .scroll-down svg {
+    width: 18px;
+    height: 28px;
+  }
+}
