@@ -35,7 +35,7 @@
   width: 60%;
   background: var(--gold);
   margin: 10px 0 20px;
-  align-self: flex-end;
+  margin-left: auto;
 }
 
 .invitation-block {
