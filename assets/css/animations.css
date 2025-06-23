@@ -1,66 +1,45 @@
-/* Анимация для "ДА" */
-.yes-calligraphy {
+/* Анимация для "ДА" - каллиграфическое написание */
+.yes-animation {
     width: 200px;
-    height: 100px;
-    margin: 0 auto;
+    height: 150px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.yes-calligraphy {
+    width: 100%;
+    height: 100%;
     overflow: visible;
 }
 
 .yes-path {
-    stroke-dasharray: 200;
-    stroke-dashoffset: 200;
-    animation: draw 2s ease-in-out forwards;
     stroke: var(--text-color);
-    stroke-width: 2;
+    stroke-width: 3;
     fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 4s linear forwards;
 }
 
 .yes-text {
     font-family: 'Dancing Script', cursive;
-    font-size: 60px;
-    fill: var(--text-color);
-    text-anchor: middle;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards 1.5s;
-    font-weight: 700;
+    font-size: 72px;
+    fill: transparent;
+    stroke: var(--text-color);
+    stroke-width: 1.5;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 4s linear forwards, fill-in 0.5s linear forwards 3.5s;
 }
 
-@keyframes draw {
-    to { stroke-dashoffset: 0; }
-}
-
-@keyframes fadeIn {
-    to { opacity: 1; }
-}
-
-/* Hero Animations */
-.she-said-text {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 0.3s forwards;
-}
-
-.couple-names {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 1.8s forwards;
-}
-
-.wedding-date {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 2s forwards;
-}
-
-.scroll-down {
-    opacity: 0;
-    animation: bounce 2s infinite 2.5s, fadeIn 0.5s ease-out 2.5s forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+@keyframes dash {
     to {
-        opacity: 1;
-        transform: translateY(0);
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-in {
+    to {
+        fill: var(--text-color);
     }
 }
