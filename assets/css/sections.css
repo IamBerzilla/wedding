@@ -31,6 +31,12 @@
     z-index: 2;
 }
 
+/* Hero Section - yes-animation adjustments */
+.hero .yes-animation {
+    margin: 30px 0;
+    height: 120px;
+}
+
 .she-said-text {
     font-size: 1.2rem;
     letter-spacing: 3px;
@@ -143,4 +149,11 @@ footer {
 .footer-contact {
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .hero .yes-animation {
+        height: 80px;
+        margin: 20px 0;
+    }
 }
