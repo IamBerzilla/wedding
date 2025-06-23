@@ -39,10 +39,10 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin: 20px 0 20px 20px;
+  margin: 10px 0 20px 20px; /* Уменьшен верхний отступ */
   opacity: 0;
   animation: fadeInUp 0.8s ease-out 0.3s forwards;
-  align-self: flex-start; /* Выравнивание по левому краю */
+  align-self: flex-start;
 }
 
 .yes-animation {
@@ -121,9 +121,7 @@
 }
 
 .scroll-down svg {
-  animation: bounce 2s infinite;
-  width: 20px; /* Уменьшенный размер */
-  height: 30px;
+  animation: bounce 2s infinite 3.5s; /* Начинает анимацию после появления всех элементов */
 }
 
 /* ==================== */
