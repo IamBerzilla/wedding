@@ -4,6 +4,18 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* Анимация для подчеркивания и блока приглашения */
+.underline {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 2.5s forwards; /* Появляется после "Да" */
+}
+
+.invitation-block {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 3s forwards; /* Появляется чуть позже подчеркивания */
+  text-align: right;
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -68,6 +80,12 @@
   .scroll-down-text {
     font-size: 0.7rem; /* Ещё меньше на мобильных */
   }
+
+@media (max-width: 1024px) { /* Для планшетов 11" */
+  .scroll-down {
+    display: flex !important;
+  }
+}
   
   .scroll-down svg {
     width: 18px;
