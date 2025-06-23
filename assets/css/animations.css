@@ -18,42 +18,49 @@
     fill: none;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: url(#ink); /* Применяем фильтр кисти */
 }
 
-/* Анимации для каждой части букв */
+/* Анимации для каждой буквы */
 #d-stroke {
-    animation: d-dash 2s linear forwards;
+    animation: d-dash 2.5s linear forwards;
 }
 
 #a-stroke {
-    animation: a-dash 2s 1.8s linear forwards;
+    animation: a-dash 2s 2.2s linear forwards;
 }
 
 @keyframes dash {
     to { stroke-dashoffset: 0; }
 }
 
-/* Специфичные анимации для каждой буквы */
+/* Анимация для русской буквы "Д" */
 @keyframes d-dash {
-    /* Вертикальная линия */
+    /* Верхняя горизонтальная линия */
     0% { stroke-dashoffset: 1000; }
-    30% { stroke-dashoffset: 850; }
-    30.01% { stroke-dashoffset: 830; }
-    /* Полукруг */
-    60% { stroke-dashoffset: 650; }
-    60.01% { stroke-dashoffset: 630; }
-    /* Нижняя линия */
+    20% { stroke-dashoffset: 900; }
+    /* Левая вертикальная линия */
+    20.01% { stroke-dashoffset: 880; }
+    50% { stroke-dashoffset: 600; }
+    /* Правая вертикальная линия */
+    50.01% { stroke-dashoffset: 580; }
+    80% { stroke-dashoffset: 300; }
+    /* Нижняя дуга */
+    80.01% { stroke-dashoffset: 280; }
     100% { stroke-dashoffset: 0; }
 }
 
+/* Анимация для буквы "А" (остаётся прежней) */
 @keyframes a-dash {
-    /* Левый наклон */
+    /* Левый штрих */
     0% { stroke-dashoffset: 1000; }
-    30% { stroke-dashoffset: 850; }
-    30.01% { stroke-dashoffset: 830; }
-    /* Правый наклон */
-    60% { stroke-dashoffset: 650; }
-    60.01% { stroke-dashoffset: 630; }
+    30% { stroke-dashoffset: 800; }
+    /* Правый штрих */
+    30.01% { stroke-dashoffset: 780; }
+    60% { stroke-dashoffset: 500; }
     /* Перекладина */
+    60.01% { stroke-dashoffset: 480; }
     100% { stroke-dashoffset: 0; }
 }
