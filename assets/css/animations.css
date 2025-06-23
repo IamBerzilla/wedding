@@ -1,10 +1,12 @@
 /* Анимация текста "Да" */
-.yes-animation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  margin-top: 20px;
+@keyframes fadeInLetters {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .yes-text {
@@ -33,19 +35,15 @@
   width: 60%;
   background: var(--gold);
   margin: 10px 0 20px;
-  align-self: center;
-  margin-left: 40%;
+  align-self: flex-end;
 }
 
-.invitation-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  color: var(--text-color);
-  margin-bottom: 10px;
+.invitation-block {
+  text-align: right;
+  margin-top: 10px;
+  width: 100%;
 }
 
-/* Адаптация для мобильных */
 @media (max-width: 768px) {
   .yes-text {
     font-size: 5rem;
@@ -53,11 +51,6 @@
   
   .underline {
     width: 70%;
-    margin-left: 30%;
-  }
-  
-  .invitation-text {
-    font-size: 1rem;
   }
 }
 
@@ -68,6 +61,5 @@
   
   .underline {
     width: 80%;
-    margin-left: 20%;
   }
 }
