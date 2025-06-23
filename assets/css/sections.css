@@ -1,151 +1,264 @@
-/* Hero Section */
+/* ==================== */
+/* HERO SECTION STYLES */
+/* ==================== */
 .hero {
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(rgba(255,249,245,0.9), rgba(255,249,245,0.9));
-    padding-top: 60px;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgba(255,249,245,0.9), rgba(255,249,245,0.9));
+  padding-top: 40px;
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://example.com/hero-bg.jpg') center/cover no-repeat;
-    z-index: -1;
-    opacity: 0.3;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://example.com/hero-bg.jpg') center/cover no-repeat;
+  z-index: -1;
+  opacity: 0.3;
 }
 
 .hero-content {
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 2;
+  text-align: left;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .she-said-text {
-    font-size: 1.2rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin: 0 0 40px 20px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  align-self: flex-start;
+}
+
+.yes-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.yes-text {
+  font-family: 'Pacifico', cursive;
+  font-size: 8rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.underline {
+  height: 2px;
+  width: 60%;
+  background: var(--gold);
+  margin: 10px 0 20px;
+  align-self: center;
+  margin-left: 40%;
+}
+
+.invitation-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  margin-bottom: 10px;
 }
 
 .couple-names {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5vw;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: var(--primary-color);
-    margin: 20px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin: 10px 0;
 }
 
 .wedding-date {
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
 .scroll-down {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Section Base */
+/* ==================== */
+/* SECTION BASE STYLES */
+/* ==================== */
 .section {
-    padding: 80px 0;
-    text-align: center;
+  padding: 80px 0;
+  text-align: center;
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--primary-color);
-    margin-bottom: 50px;
-    position: relative;
-    display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
 }
 
 .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 2px;
-    background-color: var(--gold);
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background-color: var(--gold);
 }
 
-/* Map Section */
+/* ==================== */
+/* MAP SECTION STYLES */
+/* ==================== */
 .map-container {
-    position: relative;
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin: 30px 0;
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
 }
 
 .yandex-map {
-    width: 100%;
-    height: 400px;
-    border: none;
-    display: block;
+  width: 100%;
+  height: 400px;
+  border: none;
+  display: block;
 }
 
-/* Gallery */
+/* ==================== */
+/* GALLERY STYLES */
+/* ==================== */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 40px;
 }
 
 .gallery-item {
-    height: 250px;
-    overflow: hidden;
-    border-radius: 5px;
-    position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
 }
 
-/* Footer */
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ==================== */
+/* FOOTER STYLES */
+/* ==================== */
 footer {
-    padding: 50px 0;
-    text-align: center;
-    background-color: var(--primary-color);
-    color: white;
+  padding: 50px 0;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .footer-text {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
 }
 
 .footer-contact {
-    font-size: 0.9rem;
-    opacity: 0.8;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
-/* YES Animation */
-.yes-animation {
-  margin: 20px 0 30px;
+/* ==================== */
+/* MEDIA QUERIES */
+/* ==================== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 500px;
+    padding-top: 30px;
+  }
+  
+  .yes-text {
+    font-size: 5rem;
+  }
+  
+  .underline {
+    width: 70%;
+    margin-left: 30%;
+  }
+  
+  .invitation-text {
+    font-size: 1rem;
+  }
+  
+  .couple-names {
+    font-size: 1.8rem;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-item {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .yes-text {
+    font-size: 4rem;
+  }
+  
+  .underline {
+    width: 80%;
+    margin-left: 20%;
+  }
+  
+  .couple-names {
+    font-size: 1.5rem;
+  }
+  
+  .wedding-date {
+    font-size: 1.2rem;
+  }
+  
+  .yandex-map {
+    height: 250px;
+  }
 }
