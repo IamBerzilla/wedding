@@ -9,11 +9,11 @@
 
 .yes-text {
   position: relative;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Pacifico', cursive;
   text-transform: uppercase;
   font-size: 8rem;
-  font-weight: 700;
-  letter-spacing: 4px;
+  font-weight: 400;
+  letter-spacing: 2px;
   overflow: hidden;
   color: var(--text-color);
   text-align: center;
@@ -27,7 +27,11 @@
   background-size: 80%;
   animation: text-glow 3s linear infinite;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(62, 39, 35, 0.3); /* Полупрозрачный --text-color */
+  -webkit-text-fill-color: rgba(62, 39, 35, 0.3);
+  
+  /* Тень текста */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
+               0 0 10px rgba(62, 39, 35, 0.3);
 }
 
 @keyframes text-glow {
@@ -42,7 +46,15 @@
 /* Адаптация для мобильных */
 @media (max-width: 768px) {
   .yes-text {
-    font-size: 5rem; /* Занимает ~60% ширины экрана смартфона */
+    font-size: 4.5rem;
     line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+                 0 0 8px rgba(62, 39, 35, 0.3);
+  }
+}
+
+@media (max-width: 480px) {
+  .yes-text {
+    font-size: 3.8rem;
   }
 }
