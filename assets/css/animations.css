@@ -1,61 +1,48 @@
-/* Анимация слова "ДА" */
+/* Анимация текста "ДА" */
 .yes-animation {
-  width: 300px;
-  height: 200px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.yes-calligraphy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
   width: 100%;
-  height: 100%;
-  overflow: visible;
 }
 
-.stroke-fill {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  stroke: var(--text-color);
+.yes-text {
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  overflow: hidden;
+  color: var(--text-color);
+  text-align: center;
+  
+  /* Анимация свечения */
+  background: linear-gradient(90deg, 
+    var(--light-bg), 
+    var(--text-color), 
+    var(--light-bg));
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: text-glow 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(62, 39, 35, 0.3); /* Полупрозрачный --text-color */
 }
 
-/* Анимация буквы "Д" */
-#d-stroke {
-  animation: d-dash 2s linear forwards;
+@keyframes text-glow {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
-/* Анимация буквы "А" */
-#a-stroke {
-  animation: a-dash 1.5s 1.8s linear forwards;
-}
-
-@keyframes dash {
-  to { stroke-dashoffset: 0; }
-}
-
-/* Специфичная анимация для буквы "Д" */
-@keyframes d-dash {
-  /* Вертикальная линия */
-  0% { stroke-dashoffset: 1000; }
-  20% { stroke-dashoffset: 850; }
-  20.01% { stroke-dashoffset: 830; }
-  /* Верхняя дуга */
-  50% { stroke-dashoffset: 650; }
-  50.01% { stroke-dashoffset: 630; }
-  /* Нижняя часть */
-  80% { stroke-dashoffset: 300; }
-  80.01% { stroke-dashoffset: 280; }
-  100% { stroke-dashoffset: 0; }
-}
-
-/* Специфичная анимация для буквы "А" */
-@keyframes a-dash {
-  /* Левый штрих */
-  0% { stroke-dashoffset: 1000; }
-  30% { stroke-dashoffset: 800; }
-  30.01% { stroke-dashoffset: 780; }
-  /* Правый штрих */
-  60% { stroke-dashoffset: 500; }
-  60.01% { stroke-dashoffset: 480; }
-  /* Перекладина */
-  100% { stroke-dashoffset: 0; }
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .yes-text {
+    font-size: 5rem; /* Занимает ~60% ширины экрана смартфона */
+    line-height: 1.2;
+  }
 }
