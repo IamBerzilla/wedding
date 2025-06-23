@@ -1,64 +1,28 @@
-/* Mobile Styles */
 @media (max-width: 768px) {
-    .hero {
-        min-height: 500px;
-        padding-top: 40px;
-    }
-    
-    .yes-animation {
-        height: 25vh;
-        margin-bottom: 20px;
-    }
-    
-    .she-said-text {
-        font-size: 1rem;
-        margin-bottom: 15px;
-    }
-    
-    .couple-names {
-        font-size: 8vw;
-    }
-    
-    .wedding-date {
-        font-size: 1.2rem;
-    }
-    
-    .section {
-        padding: 60px 0;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .scroll-down {
-        bottom: 20px;
-    }
-    
-    .yandex-map {
-        height: 300px;
-    }
-    
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery-item {
-        height: 200px;
-    }
+  .hero {
+    min-height: 500px;
+    padding-top: 30px;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
-    .yandex-map {
-        height: 250px;
-    }
-    
-    .map-container {
-        border-radius: 8px;
-    }
+  .yandex-map {
+    height: 250px;
+  }
 }
 
-/* Utility Classes */
 body {
-    animation: fadeIn 1s ease-out;
+  animation: fadeIn 1s ease-out;
 }
