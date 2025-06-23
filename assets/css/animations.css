@@ -11,7 +11,7 @@
 
 .yes-text {
   font-family: 'Pacifico', cursive;
-  font-size: 8rem;
+  font-size: 12rem;
   color: var(--text-color);
   margin-bottom: 10px;
   display: flex;
@@ -46,7 +46,7 @@
 
 @media (max-width: 768px) {
   .yes-text {
-    font-size: 5rem;
+    font-size: 8rem;
   }
   
   .underline {
@@ -56,7 +56,7 @@
 
 @media (max-width: 480px) {
   .yes-text {
-    font-size: 4rem;
+    font-size: 6rem;
   }
   
   .underline {
