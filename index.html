@@ -22,14 +22,20 @@
     <div class="hero-content">
         <div class="she-said-text">Она сказала</div>
 <div class="yes-animation">
-    <svg class="yes-calligraphy" viewBox="0 0 200 150">
-        <!-- Каллиграфический путь для буквы "Д" -->
-        <path class="yes-path" d="M30,80 C50,20 70,20 90,80 S130,140 150,80" />
-        <!-- Каллиграфический путь для буквы "А" -->
-        <path class="yes-path" d="M160,80 C170,40 180,40 190,80" style="animation-delay: 0.5s"/>
-        <path class="yes-path" d="M155,110 L195,110" style="animation-delay: 1s"/>
-        <!-- Текст "ДА" -->
-        <text class="yes-text" x="100" y="100" text-anchor="middle">ДА</text>
+    <svg class="yes-calligraphy" viewBox="0 0 300 200">
+        <!-- Буква "Д" -->
+        <path id="d-stroke" class="stroke-path" d="M50,150 
+           C50,50 100,30 150,50
+           C200,70 200,120 150,150
+           L50,150" />
+        
+        <!-- Буква "А" -->
+        <path id="a-stroke" class="stroke-path" d="M180,150 
+           L220,50
+           M220,50
+           L260,150
+           M210,100
+           L250,100" />
     </svg>
 </div>
         <h1 class="couple-names">Екатерина и Никита</h1>
