@@ -1,8 +1,8 @@
-/* Анимация для "ДА" - каллиграфическое написание */
+/* Каллиграфическая анимация слова "ДА" */
 .yes-animation {
-    width: 200px;
-    height: 150px;
-    margin: 20px auto;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -12,34 +12,48 @@
     overflow: visible;
 }
 
-.yes-path {
+.stroke-path {
     stroke: var(--text-color);
     stroke-width: 3;
     fill: none;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: dash 4s linear forwards;
 }
 
-.yes-text {
-    font-family: 'Dancing Script', cursive;
-    font-size: 72px;
-    fill: transparent;
-    stroke: var(--text-color);
-    stroke-width: 1.5;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 4s linear forwards, fill-in 0.5s linear forwards 3.5s;
+/* Анимации для каждой части букв */
+#d-stroke {
+    animation: d-dash 2s linear forwards;
+}
+
+#a-stroke {
+    animation: a-dash 2s 1.8s linear forwards;
 }
 
 @keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
+    to { stroke-dashoffset: 0; }
 }
 
-@keyframes fill-in {
-    to {
-        fill: var(--text-color);
-    }
+/* Специфичные анимации для каждой буквы */
+@keyframes d-dash {
+    /* Вертикальная линия */
+    0% { stroke-dashoffset: 1000; }
+    30% { stroke-dashoffset: 850; }
+    30.01% { stroke-dashoffset: 830; }
+    /* Полукруг */
+    60% { stroke-dashoffset: 650; }
+    60.01% { stroke-dashoffset: 630; }
+    /* Нижняя линия */
+    100% { stroke-dashoffset: 0; }
+}
+
+@keyframes a-dash {
+    /* Левый наклон */
+    0% { stroke-dashoffset: 1000; }
+    30% { stroke-dashoffset: 850; }
+    30.01% { stroke-dashoffset: 830; }
+    /* Правый наклон */
+    60% { stroke-dashoffset: 650; }
+    60.01% { stroke-dashoffset: 630; }
+    /* Перекладина */
+    100% { stroke-dashoffset: 0; }
 }
