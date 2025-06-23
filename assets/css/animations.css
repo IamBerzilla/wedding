@@ -1,66 +1,61 @@
-/* Каллиграфическая анимация слова "ДА" */
+/* Анимация слова "ДА" */
 .yes-animation {
-    width: 300px;
-    height: 200px;
-    margin: 0 auto;
-    position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .yes-calligraphy {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
 
-.stroke-path {
-    stroke: var(--text-color);
-    stroke-width: 3;
-    fill: none;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    filter: url(#ink); /* Применяем фильтр кисти */
+.stroke-fill {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke: var(--text-color);
 }
 
-/* Анимации для каждой буквы */
+/* Анимация буквы "Д" */
 #d-stroke {
-    animation: d-dash 2.5s linear forwards;
+  animation: d-dash 2s linear forwards;
 }
 
+/* Анимация буквы "А" */
 #a-stroke {
-    animation: a-dash 2s 2.2s linear forwards;
+  animation: a-dash 1.5s 1.8s linear forwards;
 }
 
 @keyframes dash {
-    to { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 0; }
 }
 
-/* Анимация для русской буквы "Д" */
+/* Специфичная анимация для буквы "Д" */
 @keyframes d-dash {
-    /* Верхняя горизонтальная линия */
-    0% { stroke-dashoffset: 1000; }
-    20% { stroke-dashoffset: 900; }
-    /* Левая вертикальная линия */
-    20.01% { stroke-dashoffset: 880; }
-    50% { stroke-dashoffset: 600; }
-    /* Правая вертикальная линия */
-    50.01% { stroke-dashoffset: 580; }
-    80% { stroke-dashoffset: 300; }
-    /* Нижняя дуга */
-    80.01% { stroke-dashoffset: 280; }
-    100% { stroke-dashoffset: 0; }
+  /* Вертикальная линия */
+  0% { stroke-dashoffset: 1000; }
+  20% { stroke-dashoffset: 850; }
+  20.01% { stroke-dashoffset: 830; }
+  /* Верхняя дуга */
+  50% { stroke-dashoffset: 650; }
+  50.01% { stroke-dashoffset: 630; }
+  /* Нижняя часть */
+  80% { stroke-dashoffset: 300; }
+  80.01% { stroke-dashoffset: 280; }
+  100% { stroke-dashoffset: 0; }
 }
 
-/* Анимация для буквы "А" (остаётся прежней) */
+/* Специфичная анимация для буквы "А" */
 @keyframes a-dash {
-    /* Левый штрих */
-    0% { stroke-dashoffset: 1000; }
-    30% { stroke-dashoffset: 800; }
-    /* Правый штрих */
-    30.01% { stroke-dashoffset: 780; }
-    60% { stroke-dashoffset: 500; }
-    /* Перекладина */
-    60.01% { stroke-dashoffset: 480; }
-    100% { stroke-dashoffset: 0; }
+  /* Левый штрих */
+  0% { stroke-dashoffset: 1000; }
+  30% { stroke-dashoffset: 800; }
+  30.01% { stroke-dashoffset: 780; }
+  /* Правый штрих */
+  60% { stroke-dashoffset: 500; }
+  60.01% { stroke-dashoffset: 480; }
+  /* Перекладина */
+  100% { stroke-dashoffset: 0; }
 }
