@@ -173,6 +173,28 @@
 }
 
 /* ==================== */
+/* Dress Code Section */
+/* ==================== */
+.dress-code {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.dress-code p {
+  margin: 0 0 15px 0;
+}
+
+.dress-code strong {
+  display: block;
+  font-size: 1.3em;
+  color: var(--primary-color);
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+/* ==================== */
 /* GALLERY STYLES */
 /* ==================== */
 .gallery {
@@ -273,6 +295,19 @@ footer {
   .section:has(#rsvp-form) {
     padding: 40px 0;
   }
+  .dress-code {
+    padding: 0 20px;
+  }
+  
+  .dress-code p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .dress-code strong {
+    font-size: 1.1rem;
+    margin: 8px 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -298,5 +333,18 @@ footer {
   }
   .section:has(#rsvp-form) {
     padding: 30px 0;
+  }
+
+  .dress-code {
+    padding: 0 15px;
+  }
+
+  .dress-code p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+
+  .dress-code strong {
+    font-size: 1rem;
   }
 }
