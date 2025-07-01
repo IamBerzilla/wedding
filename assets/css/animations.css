@@ -7,12 +7,12 @@
 /* Анимация для подчеркивания и блока приглашения */
 .underline {
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 2.5s forwards; /* Появляется после "Да" */
+  animation: fadeInUp 0.8s ease-out 1.5s forwards; /* Появляется после "Да" */
 }
 
 .invitation-block {
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 3s forwards; /* Появляется чуть позже подчеркивания */
+  animation: fadeInUp 0.8s ease-out 2s forwards; /* Появляется чуть позже подчеркивания */
   text-align: right;
 }
 
