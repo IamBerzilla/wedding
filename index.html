@@ -130,14 +130,17 @@
 <iframe name="hidden-form" style="display:none;"></iframe>
 
 <!-- Форма RSVP -->
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">АНКЕТА ГОСТЯ</h2>
   <form 
     id="rsvp-form" 
     action="https://formspree.io/f/xvgrwgkn" 
     method="POST"
   >
     <input type="hidden" name="_next" value="https://nickandkatewedding2025.ru/spasibo.html">
-
-    <h2 class="section-title">АНКЕТА ГОСТЯ</h2>
+    
     <div class="form-group">
       <label for="name">Ваше Имя и Фамилия</label>
       <input type="text" id="name" name="name" required>
@@ -173,6 +176,9 @@
   >
     <button type="submit">Отправить</button>
   </form>
+</div>
+</section>
+
   <!-- Подключение скрипта -->
   <script src="assets/js/form-handler.js" defer></script>
 </body>

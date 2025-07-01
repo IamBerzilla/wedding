@@ -220,6 +220,15 @@ footer {
   opacity: 0.8;
 }
 
+/* =================*/
+/* Секция с формой */
+/* =================*/
+
+.section:has(#rsvp-form) {
+  padding: 60px 0;
+  background-color: #f9f5f0; /* Фон как у других цветных секций */
+}
+
 /* ==================== */
 /* MEDIA QUERIES */
 /* ==================== */
@@ -261,6 +270,9 @@ footer {
   .gallery-item {
     height: 200px;
   }
+  .section:has(#rsvp-form) {
+    padding: 40px 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -283,5 +295,8 @@ footer {
   
   .yandex-map {
     height: 250px;
+  }
+  .section:has(#rsvp-form) {
+    padding: 30px 0;
   }
 }
