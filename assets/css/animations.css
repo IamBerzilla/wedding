@@ -21,13 +21,13 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-.yes-text {
+/*.yes-text {
   font-family: 'Pacifico', cursive;
   font-size: 12rem;
   color: var(--text-color);
   margin-bottom: 10px;
   display: flex;
-}
+}*/
 
 .letter-d {
   display: inline-block;
