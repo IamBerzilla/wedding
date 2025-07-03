@@ -275,27 +275,30 @@ footer {
     display: inline-flex;
     align-items: center;
     background-color: var(--gold);
-    color: var(--text-color);
+    color: white !important; /* Белый текст */
     padding: 10px 20px;
     border-radius: 3px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    gap: 8px;
 }
 
 .telegram-btn:hover {
-    background-color: #2AABEE;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    background-color: white;
+    color: var(--gold) !important;
 }
 
-.telegram-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-    fill: currentColor;
+.telegram-btn i {
+    font-size: 1.2rem;
+    color: inherit;
+    transition: inherit;
+}
+
+.telegram-btn:hover i {
+    color: var(--gold);
 }
 
 /* =================*/

@@ -116,9 +116,8 @@
         font-size: 0.9rem;
     }
     
-    .telegram-icon {
-        width: 16px;
-        height: 16px;
+    .telegram-btn i {
+        font-size: 1rem;
     }
 
 }
