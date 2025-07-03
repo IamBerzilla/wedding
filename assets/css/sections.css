@@ -59,13 +59,21 @@
   display: flex;
 }
 
-.underline {
+/*.underline {
   height: 2px;
   width: 45%;
   background: var(--gold);
   margin: 10px 0 20px;
   align-self: right;
   margin-left: 40%;
+}*/
+
+.underline {
+  height: 2px;
+  width: 60%;
+  background: var(--gold);
+  margin: 10px 0 20px;
+  margin-left: auto;
 }
 
 .invitation-text {
@@ -206,7 +214,7 @@
 }
 
 .gallery-item {
-  height: 250px;
+  height: 300px;
   overflow: hidden;
   border-radius: 5px;
   position: relative;
@@ -291,7 +299,7 @@ footer {
   }
   
   .gallery-item {
-    height: 200px;
+    height: 250px;
   }
   .section:has(#rsvp-form) {
     padding: 40px 0;

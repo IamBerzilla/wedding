@@ -42,14 +42,6 @@
   text-transform: lowercase;
 }
 
-.underline {
-  height: 2px;
-  width: 60%;
-  background: var(--gold);
-  margin: 10px 0 20px;
-  margin-left: auto;
-}
-
 .invitation-block {
   text-align: right;
   margin-top: 10px;
@@ -89,6 +81,6 @@
   
   .scroll-down svg {
     width: 18px;
-    height: 28px;
+    height: 26px;
   }
 }
