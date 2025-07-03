@@ -40,39 +40,6 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .yes-text {
-    font-size: 8rem;
-  }
-  
-  .underline {
-    width: 70%;
-  }
-}
-
-@media (max-width: 480px) {
-  .yes-text {
-    font-size: 6rem;
-  }
-  
-  .underline {
-    width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .scroll-down-text {
-    font-size: 0.7rem; /* Ещё меньше на мобильных */
-  }
-
-@media (max-width: 1024px) { /* Для планшетов 11" */
-  .scroll-down {
-    display: flex !important;
-  }
-}
-  
-  .scroll-down svg {
-    width: 18px;
-    height: 26px;
-  }
+.scroll-down svg {
+  animation: bounce 2s infinite 3s; /* Начинает анимацию после появления всех элементов */
 }

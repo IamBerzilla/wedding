@@ -90,40 +90,41 @@
   color: var(--primary-color);
 }
 
+/* ==================== */
+/* SCROLL and TEXT */
+/* ==================== */
+
 .scroll-down {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10;
+  width: 100%;
+  pointer-events: none;
 }
 
 .scroll-down-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem; /* Уменьшенный размер */
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
   color: var(--primary-color);
   margin-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0) translateX(-50%);
-  }
-  40% {
-    transform: translateY(-10px) translateX(-50%);
-  }
-  60% {
-    transform: translateY(-5px) translateX(-50%);
-  }
+  text-align: center;
+  width: 100%;
 }
 
 .scroll-down svg {
-  animation: bounce 2s infinite 3.5s; /* Начинает анимацию после появления всех элементов */
+  animation: bounce 2s infinite;
+  width: clamp(18px, 5vw, 22px); /* Адаптивная ширина */
+  height: auto;
+  pointer-events: auto; /* Разрешаем клики на стрелке */
 }
+
 
 /* ==================== */
 /* SECTION BASE STYLES */
@@ -262,7 +263,7 @@ footer {
   }
   
   .yes-text {
-    font-size: 5rem;
+    font-size: 8rem;
   }
   
   .underline {
@@ -309,11 +310,24 @@ footer {
     font-size: 1.1rem;
     margin: 8px 0;
   }
+
+  .scroll-down-text {
+    font-size: 0.7rem; 
+  }
+
+  .scroll-down {
+    display: flex !important;
+  }
+  .scroll-down svg {
+    width: 18px;
+    height: 26px;
+  }
+
 }
 
 @media (max-width: 480px) {
   .yes-text {
-    font-size: 4rem;
+    font-size: 6rem;
   }
   
   .underline {
