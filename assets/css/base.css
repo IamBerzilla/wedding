@@ -33,3 +33,24 @@ body {
     margin: 50px auto;
     width: 150px;
 }
+
+/* Основные стили ссылок с вашими цветами */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--secondary-color);
+}
+
+a:active {
+    color: var(--primary-color);
+    opacity: 0.8;
+}
