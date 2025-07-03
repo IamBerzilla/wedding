@@ -209,11 +209,6 @@
 /* GALLERY STYLES */
 /* ==================== */
 .gallery {
-  /*display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin-top: 40px;*/
-
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
@@ -223,11 +218,6 @@
 }
 
 .gallery-item {
-  /*height: 300px;
-  overflow: hidden;
-  border-radius: 5px;
-  position: relative;*/
-
   aspect-ratio: 3/4; /* Соотношение для вертикальных фото */
   overflow: hidden;
   border-radius: 8px;
@@ -240,10 +230,6 @@
 }
 
 .gallery-item img {
-  /*width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s;*/
   width: 100%;
   height: 100%;
   object-fit: contain; /* Показываем всё изображение */
@@ -285,3 +271,27 @@ footer {
   background-color: #f9f5f0; /* Фон как у других цветных секций */
 }
 
+/* Стили для поля с пожеланиями */
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  color: var(--text-color);
+  resize: vertical; /* Позволяет изменять высоту */
+  min-height: 100px;
+  transition: border-color 0.3s;
+}
+
+/* Стили для текста-подсказки */
+textarea::placeholder {
+  color: var(--accent-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+textarea:focus::placeholder {
+  opacity: 0.5;
+}

@@ -89,6 +89,15 @@
     padding: 12px 20px;
   }
 
+  textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  textarea::placeholder {
+    font-size: 0.85rem;
+  }
+
 }
 
 @media (max-width: 480px) {
