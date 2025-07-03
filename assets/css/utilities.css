@@ -3,10 +3,16 @@
 /* ==================== */
 @media (max-width: 768px) {
   .hero {
-    min-height: 500px;
-    padding-top: 30px;
+    min-height: 85vh;
+    padding: 30px 15px 50px;
+    /*min-height: 500px;
+    padding-top: 30px;*/
   }
-  
+
+  .hero-content {
+    margin-top: 20px; /* Добавляем отступ для контента */
+  }
+
   .yes-text {
     font-size: 8rem;
   }
