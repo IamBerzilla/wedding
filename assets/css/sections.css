@@ -39,7 +39,7 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin: 10px 0 20px 20px; /* Уменьшен верхний отступ */
+  /* margin: 10px 0 20px 20px; /* Уменьшен верхний отступ */
   opacity: 0;
   animation: fadeInUp 0.8s ease-out 0.3s forwards;
   align-self: flex-start;
@@ -51,7 +51,8 @@
 }
 
 .yes-text {
-  font-family: 'Pacifico', cursive;
+  /*font-family: 'Pacifico', cursive;*/
+  font-family: 'Lobster', cursive;
   font-size: 8rem;
   color: var(--text-color);
   margin-bottom: 10px;
