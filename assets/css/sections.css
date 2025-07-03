@@ -1,7 +1,9 @@
 /* Hero Section */
-.hero {
-  height: 100vh;
-  min-height: 600px;
+
+
+/*.hero {
+  height: 700px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,6 +12,20 @@
   overflow: hidden;
   background: linear-gradient(rgba(255,249,245,0.9), rgba(255,249,245,0.9));
   padding-top: 40px;
+}*/
+
+.hero {
+  min-height: 90vh;     /* Вместо 100vh для уменьшения пустого пространства */
+  max-height: 1200px;   /* Ограничение для очень больших экранов */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Лучшее распределение пространства */
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgba(255,249,245,0.95), rgba(255,249,245,0.95));
+  padding: 30px 20px 60px; /* Верх/бок/низ */
+  box-sizing: border-box;
 }
 
 .hero::before {
@@ -21,7 +37,7 @@
   height: 100%;
   background: url('https://example.com/hero-bg.jpg') center/cover no-repeat;
   z-index: -1;
-  opacity: 0.3;
+  opacity: 0.15;
 }
 
 .hero-content {
@@ -261,112 +277,3 @@ footer {
   background-color: #f9f5f0; /* Фон как у других цветных секций */
 }
 
-/* ==================== */
-/* MEDIA QUERIES */
-/* ==================== */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 500px;
-    padding-top: 30px;
-  }
-  
-  .yes-text {
-    font-size: 8rem;
-  }
-  
-  .underline {
-    width: 50%;
-    margin-left: auto;
-  }
-  
-  .invitation-text {
-    font-size: 1rem;
-  }
-  
-  .couple-names {
-    font-size: 1.8rem;
-  }
-  
-  .section {
-    padding: 60px 0;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-  
-  .gallery-item {
-    height: 250px;
-  }
-  .section:has(#rsvp-form) {
-    padding: 40px 0;
-  }
-  .dress-code {
-    padding: 0 20px;
-  }
-  
-  .dress-code p {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-  }
-  
-  .dress-code strong {
-    font-size: 1.1rem;
-    margin: 8px 0;
-  }
-
-  .scroll-down-text {
-    font-size: 0.7rem; 
-  }
-
-  .scroll-down {
-    bottom: 10px;
-  }
-  .scroll-down svg {
-    width: 18px;
-    height: 26px;
-  }
-}
-
-@media (max-width: 480px) {
-  .yes-text {
-    font-size: 6rem;
-  }
-  
-  .underline {
-    width: 60%;
-    margin-left: auto;
-  }
-  
-  .couple-names {
-    font-size: 1.5rem;
-  }
-  
-  .wedding-date {
-    font-size: 1.2rem;
-  }
-  
-  .yandex-map {
-    height: 250px;
-  }
-  .section:has(#rsvp-form) {
-    padding: 30px 0;
-  }
-
-  .dress-code {
-    padding: 0 15px;
-  }
-
-  .dress-code p {
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-  }
-
-  .dress-code strong {
-    font-size: 1rem;
-  }
-}
