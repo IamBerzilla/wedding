@@ -4,10 +4,10 @@
 @media (max-width: 768px) {
   .hero {
     min-height: 500px;
-    padding: 30px 15px 50px;
+    padding: 10px 15px 50px;
     /*padding-top: 30px;*/
   }
-  
+
   .yes-text {
     font-size: 8rem;
   }
