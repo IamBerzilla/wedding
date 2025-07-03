@@ -1,7 +1,27 @@
+/* ==================== */
+/* MEDIA QUERIES */
+/* ==================== */
 @media (max-width: 768px) {
   .hero {
     min-height: 500px;
     padding-top: 30px;
+  }
+  
+  .yes-text {
+    font-size: 8rem;
+  }
+  
+  .underline {
+    width: 50%;
+    margin-left: auto;
+  }
+  
+  .invitation-text {
+    font-size: 1rem;
+  }
+  
+  .couple-names {
+    font-size: 1.8rem;
   }
   
   .section {
@@ -15,11 +35,93 @@
   .gallery {
     grid-template-columns: 1fr;
   }
+  
+  .gallery-item {
+    height: 250px;
+  }
+  .section:has(#rsvp-form) {
+    padding: 40px 0;
+  }
+  .dress-code {
+    padding: 0 20px;
+  }
+  
+  .dress-code p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .dress-code strong {
+    font-size: 1.1rem;
+    margin: 8px 0;
+  }
+
+  .scroll-down-text {
+    font-size: 0.7rem; 
+  }
+
+  .scroll-down {
+    bottom: 10px;
+  }
+  .scroll-down svg {
+    width: 18px;
+    height: 26px;
+  }
+
+  #rsvp-form {
+    padding: 0 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input, select, textarea {
+    padding: 10px 12px;
+  }
+  
+  button[type="submit"] {
+    padding: 12px 20px;
+  }
+
 }
 
 @media (max-width: 480px) {
+  .yes-text {
+    font-size: 6rem;
+  }
+  
+  .underline {
+    width: 60%;
+    margin-left: auto;
+  }
+  
+  .couple-names {
+    font-size: 1.5rem;
+  }
+  
+  .wedding-date {
+    font-size: 1.2rem;
+  }
+  
   .yandex-map {
     height: 250px;
+  }
+  .section:has(#rsvp-form) {
+    padding: 30px 0;
+  }
+
+  .dress-code {
+    padding: 0 15px;
+  }
+
+  .dress-code p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+
+  .dress-code strong {
+    font-size: 1rem;
   }
 }
 

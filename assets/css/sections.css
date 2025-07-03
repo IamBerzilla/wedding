@@ -105,6 +105,7 @@
   z-index: 10;
   width: 100%;
   pointer-events: none;
+  transition: opacity 0.5s ease-out;
 }
 
 .scroll-down-text {
@@ -116,6 +117,7 @@
   letter-spacing: 1px;
   text-align: center;
   width: 100%;
+  transition: inherit;
 }
 
 .scroll-down svg {
@@ -123,6 +125,12 @@
   width: clamp(18px, 5vw, 22px); /* Адаптивная ширина */
   height: auto;
   pointer-events: auto; /* Разрешаем клики на стрелке */
+  transition: inherit;
+}
+
+/* Отключаем анимацию при скрытии */
+.scroll-down.hidden {
+  animation: none;
 }
 
 
@@ -316,13 +324,12 @@ footer {
   }
 
   .scroll-down {
-    display: flex !important;
+    bottom: 10px;
   }
   .scroll-down svg {
     width: 18px;
     height: 26px;
   }
-
 }
 
 @media (max-width: 480px) {

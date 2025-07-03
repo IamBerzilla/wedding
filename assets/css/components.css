@@ -61,22 +61,3 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: var(--primary-color);
 }
-
-/* Адаптация для мобильных */
-@media (max-width: 768px) {
-  #rsvp-form {
-    padding: 0 15px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  input, select, textarea {
-    padding: 10px 12px;
-  }
-  
-  button[type="submit"] {
-    padding: 12px 20px;
-  }
-}
