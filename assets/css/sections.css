@@ -1,31 +1,17 @@
 /* Hero Section */
 
 
-/*.hero {
-  height: 700px;
-  min-height: 400px;
+.hero {
+  height: 90vh;
+  min-height: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(255,249,245,0.9), rgba(255,249,245,0.9));
-  padding-top: 40px;
-}*/
-
-.hero {
-  min-height: 90vh;     /* Вместо 100vh для уменьшения пустого пространства */
-  max-height: 1200px;   /* Ограничение для очень больших экранов */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Лучшее распределение пространства */
-  align-items: center;
-  position: relative;
-  overflow: hidden;
   background: linear-gradient(rgba(255,249,245,0.95), rgba(255,249,245,0.95));
-  padding: 30px 20px 60px; /* Верх/бок/низ */
-  box-sizing: border-box;
+  padding-top: 20px;
 }
 
 .hero::before {
