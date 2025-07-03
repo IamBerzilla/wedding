@@ -34,11 +34,15 @@
   }
   
   .gallery {
-    grid-template-columns: 1fr;
+    /*grid-template-columns: 1fr;*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 15px;
   }
   
   .gallery-item {
-    height: 250px;
+    aspect-ratio: 2/3;
+    /*height: 250px;*/
   }
   .section:has(#rsvp-form) {
     padding: 40px 0;
@@ -123,6 +127,16 @@
 
   .dress-code strong {
     font-size: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .gallery-item {
+    aspect-ratio: 3/4;
+    max-height: 500px;
   }
 }
 

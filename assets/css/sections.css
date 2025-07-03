@@ -209,28 +209,51 @@
 /* GALLERY STYLES */
 /* ==================== */
 .gallery {
-  display: grid;
+  /*display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-top: 40px;
+  margin-top: 40px;*/
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .gallery-item {
-  height: 300px;
+  /*height: 300px;
   overflow: hidden;
   border-radius: 5px;
+  position: relative;*/
+
+  aspect-ratio: 3/4; /* Соотношение для вертикальных фото */
+  overflow: hidden;
+  border-radius: 8px;
   position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-item.vertical {
+  aspect-ratio: 9/16; /* Более узкое соотношение */
 }
 
 .gallery-item img {
-  width: 100%;
+  /*width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+  transition: transform 0.5s;*/
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Показываем всё изображение */
+  object-position: center;
+  transition: all 0.5s ease;
 }
 
 .gallery-item:hover img {
   transform: scale(1.1);
+  opacity: 0.9;
 }
 
 /* ==================== */
