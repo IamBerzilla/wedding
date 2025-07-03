@@ -9,7 +9,7 @@
   }
 
   .yes-text {
-    font-size: 8rem;
+    font-size: 14rem;
   }
   
   .underline {
@@ -89,7 +89,7 @@
 
 @media (max-width: 480px) {
   .yes-text {
-    font-size: 6rem;
+    font-size: 10rem;
   }
   
   .underline {
