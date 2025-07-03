@@ -107,6 +107,20 @@
     height: 400px;
   }
 
+  footer {
+        padding: 30px 0;
+    }
+    
+    .telegram-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .telegram-icon {
+        width: 16px;
+        height: 16px;
+    }
+
 }
 
 @media (max-width: 480px) {

@@ -253,13 +253,49 @@ footer {
 }
 
 .footer-text {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+  margin-bottom: 0;
   font-size: 1.1rem;
 }
 
 .footer-contact {
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+* Кнопка Telegram */
+.telegram-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--gold);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.telegram-btn:hover {
+    background-color: #2AABEE;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.telegram-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    fill: currentColor;
 }
 
 /* =================*/
