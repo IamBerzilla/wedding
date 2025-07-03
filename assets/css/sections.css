@@ -276,28 +276,55 @@ footer {
     align-items: center;
     background-color: var(--gold);
     color: var(--text-color) !important;
-    padding: 10px 20px;
-    border-radius: 3px;
+    padding: 12px 24px;
+    border-radius: 4px;
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid rgba(0,0,0,0.05);
-    gap: 8px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+                0 6px 12px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: none;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.telegram-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+    border-radius: 3px;
+}
+
+/* Состояние при наведении */
 .telegram-btn:hover {
     background-color: var(--primary-color);
-    color: var(--accent-color) !important;
-    text-decoration: none;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    color: var(--light-bg) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25),
+                0 8px 16px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
+/* Активное состояние (при нажатии) */
+.telegram-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Иконка Telegram */
 .telegram-btn i {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: inherit;
     transition: inherit;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
 }
 
 .telegram-btn:hover i {
